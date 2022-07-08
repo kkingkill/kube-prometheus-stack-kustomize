@@ -1,0 +1,52 @@
+alertmanager:
+  enabled: true
+  alertmanagerSpec:
+    storage: 
+      volumeClaimTemplate:
+        spec:
+          #storageClassName: gp2
+          accessModes: ["ReadWriteOnce"]
+          resources:
+            requests:
+              storage: 1Gi
+
+grafana:
+  adminPassword: gra@07@5A_@
+ 
+  # ingress:
+  #   enabled: true
+  #   ingressClassName: nginx
+  #   hosts:
+  #     - monitor.nft-engineer.moala.fun
+  #   path: /
+
+  persistence:
+    type: pvc
+    enabled: true
+    #storageClassName: gp2
+    accessModes: ["ReadWriteOnce"]
+    size: 5Gi
+
+prometheus:
+  enabled: true 
+  prometheusSpec:
+    storageSpec:
+      volumeClaimTemplate:
+        spec:
+          accessModes: ["ReadWriteOnce"]    
+          resources:
+            requests:
+              storage: 10Gi
+          #storageClassName: gp2
+
+    retention: 14d
+    # remoteWrite: 
+    #   # write to mimir 
+    #   - url: http://mimir-distributed-nginx.monitoring.svc.cluster.local/api/v1/push
+    #     headers:
+    #       X-Scope-OrgID: moala-nft-engineer
+    
+
+
+
+

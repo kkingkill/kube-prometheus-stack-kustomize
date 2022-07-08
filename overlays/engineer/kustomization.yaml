@@ -1,0 +1,16 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+  
+helmCharts:
+  - name: kube-prometheus-stack
+    repo: https://github.com/kkingkill/kube-prometheus-stack-chart／
+    version: 36.2.1
+    releaseName: kube-prometheus-stack-engineer
+    namespace: monitoring
+    includeCRDs: true
+    valuesFile: values.yaml
+    valuesInline:
+      clusterName: default
