@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: ./overlays/engineer/charts
+    path: /overlays/engineer
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
     targetRevision: HEAD
   kustomize:
