@@ -6,7 +6,7 @@ resources:
   
 helmCharts:
   - name: kube-prometheus-stack
-    repo: https://github.com/kkingkill/kube-prometheus-stack-chart-kustomize／
+    repo: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
     version: 36.2.1
     releaseName: kube-prometheus-stack-engineer
     namespace: monitoring
