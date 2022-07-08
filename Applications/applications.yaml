@@ -12,6 +12,8 @@ spec:
     path: ./overlays/engineer
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
     targetRevision: HEAD
+    kustomize:
+      enableHelm: true   # This appends --enable-helm to the kustomize build command
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
