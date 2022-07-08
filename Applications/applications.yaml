@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: ./overlays/engineer
-    repoURL: https://github.com/kkingkill/kube-prometheus-stack-chart.git
+    repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
