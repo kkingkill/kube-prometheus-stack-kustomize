@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kube-prometheus-stack-local
+  labels:
+    app.kubernetes.io/name: kube-prometheus-stack-local
+spec:
+  destination:
+    name: in-cluster
+    namespace: monitoring
+  project: default
+  source:
+    repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
+    path: kube-prometheus-stack-local/overlays/engineer/chart
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  syncPolicy:
+    syncOptions:
+      - Replace=true
+    automated:
+      prune: true
+      selfHeal: true
