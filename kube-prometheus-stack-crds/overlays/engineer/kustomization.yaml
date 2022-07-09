@@ -1,0 +1,13 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmCharts:
+  - name: kube-prometheus-stack-crds
+    repo: https://prometheus-community.github.io/helm-charts
+    version: 36.6.1
+    releaseName: kube-prometheus-stack-crds
+    namespace: monitoring
+    includeCRDs: true
+    #valuesFile: values.yaml
+    valuesInline:
+      clusterName: in-cluster
