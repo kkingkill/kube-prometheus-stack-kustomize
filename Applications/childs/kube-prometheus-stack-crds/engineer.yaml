@@ -5,8 +5,7 @@ metadata:
   labels:
     app.kubernetes.io/name: kube-prometheus-stack-crds
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
-  
+    argocd.argoproj.io/sync-wave: "2" 
 spec:
   destination:
     name: in-cluster
