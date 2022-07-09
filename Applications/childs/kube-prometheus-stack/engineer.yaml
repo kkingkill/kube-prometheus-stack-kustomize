@@ -7,7 +7,7 @@ metadata:
 spec:
   destination:
     namespace: monitoring
-    name: moala-nft-engineer
+    name: in-cluster
   project: default
   source:
     path: kube-prometheus-stack/overlays/engineer
