@@ -13,8 +13,8 @@ spec:
     path: kube-prometheus-stack/overlays/engineer
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
     targetRevision: feature/add-prometheus-stack
-    # helm:
-    #   skipCrds: true
+    helm:
+      skipCrds: true
     # kustomize:
     #  enableHelm: true   # This appends --enable-helm to the kustomize build command
   syncPolicy:
