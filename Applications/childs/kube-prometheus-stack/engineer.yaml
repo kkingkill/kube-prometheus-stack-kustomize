@@ -15,8 +15,8 @@ spec:
     targetRevision: HEAD
     # helm:
     #   skipCrds: true
-    # kustomize:
-    #  enableHelm: true   # This appends --enable-helm to the kustomize build command
+    kustomize:
+     enableHelm: true   # This appends --enable-helm to the kustomize build command
   syncPolicy:
     # syncPolicy:
     #   syncOptions:
