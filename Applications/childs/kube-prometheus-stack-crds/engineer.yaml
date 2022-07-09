@@ -23,14 +23,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-
-
-
-  source:
-    path: kube-prometheus-stack/overlays/engineer
-    repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
-    targetRevision: HEAD
-    # plugin:
-    #   name: kustomized-helm
-    helm:
-      skipCrds: true
