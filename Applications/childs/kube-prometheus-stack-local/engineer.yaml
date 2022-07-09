@@ -13,9 +13,9 @@ spec:
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
     path: kube-prometheus-stack-local/overlays/engineer/chart
     targetRevision: HEAD
-    helm:
-      valueFiles:
-        - myvalues.yaml
+    # helm:
+    #   valueFiles:
+    #     - myvalues.yaml
     directory:
       recurse: true
   syncPolicy:
