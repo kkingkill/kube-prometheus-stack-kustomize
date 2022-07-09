@@ -12,7 +12,7 @@ spec:
     namespace: monitoring
   project: default
   source:
-    repoURL: https://github.com/prometheus-community/helm-charts.git
+    repoURL: https://github.com/prometheus-community/helm-charts
     path: charts/kube-prometheus-stack/crds/
     targetRevision: kube-prometheus-stack-36.2.0
     directory:
@@ -23,3 +23,14 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
+
+
+  source:
+    path: kube-prometheus-stack/overlays/engineer
+    repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
+    targetRevision: HEAD
+    # plugin:
+    #   name: kustomized-helm
+    helm:
+      skipCrds: true
