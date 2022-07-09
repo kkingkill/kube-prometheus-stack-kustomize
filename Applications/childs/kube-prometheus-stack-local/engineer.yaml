@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kube-prometheus-stack-local
+  namespace: argocd
   labels:
     app.kubernetes.io/name: kube-prometheus-stack-local
 spec:
@@ -11,13 +12,8 @@ spec:
   project: default
   source:
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
-    path: kube-prometheus-stack-local/overlays/engineer/chart
+    path: ./kube-prometheus-stack-local/overlays/engineer/chart
     targetRevision: HEAD
-    # helm:
-    #   valueFiles:
-    #     - myvalues.yaml
-    directory:
-      recurse: true
   syncPolicy:
     syncOptions:
       - Replace=true
