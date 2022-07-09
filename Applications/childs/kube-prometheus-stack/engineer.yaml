@@ -10,7 +10,7 @@ spec:
     name: in-cluster
   project: default
   source:
-    path: kube-prometheus-stack/overlays/engineer
+    path: ./kube-prometheus-stack/overlays/engineer
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
     targetRevision: HEAD
     # helm:
