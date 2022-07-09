@@ -15,8 +15,8 @@ spec:
     targetRevision: HEAD
     plugin:
       name: kustomized-helm
-    # helm:
-    #   skipCrds: true
+    helm:
+      skipCrds: true
   syncPolicy:
     # syncPolicy:
     #   syncOptions:
