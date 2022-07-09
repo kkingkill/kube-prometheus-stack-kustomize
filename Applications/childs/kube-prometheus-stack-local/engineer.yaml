@@ -15,6 +15,9 @@ spec:
     #path: ./kube-prometheus-stack-local/overlays/engineer/chart
     path: ./kube-prometheus-stack-local/overlays/engineer/
     targetRevision: HEAD
+    helm:
+      valuesFiles:
+      - values.yaml
   syncPolicy:
     # syncOptions:
     #   - Replace=true
