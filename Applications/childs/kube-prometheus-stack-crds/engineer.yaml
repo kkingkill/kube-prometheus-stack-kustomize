@@ -13,10 +13,10 @@ spec:
   project: default
   source:
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
-    path: kube-prometheus-stack-crds/overlays/engineer/crds
+    path: ./kube-prometheus-stack-crds/overlays/engineer/crds
     targetRevision: HEAD
-    directory:
-      recurse: true
+    # directory:
+    #   recurse: true
   syncPolicy:
     syncOptions:
       - Replace=true
