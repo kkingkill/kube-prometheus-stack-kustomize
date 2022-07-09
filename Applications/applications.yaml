@@ -11,6 +11,6 @@ spec:
     #server: https://kubernetes.default.svc
   project: default
   source:
-    path: applications
+    path: applications/childs
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
     targetRevision: HEAD
