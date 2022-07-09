@@ -4,6 +4,8 @@ metadata:
   name: kube-prometheus-stack-engineer
   labels:
     app.kubernetes.io/name: kube-prometheus-stack
+  annotations:
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   destination:
     namespace: monitoring

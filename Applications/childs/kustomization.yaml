@@ -1,3 +1,4 @@
 namespace: argocd
 resources:
   - kube-prometheus-stack
+  - kube-prometheus-stack-crds
