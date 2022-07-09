@@ -12,7 +12,7 @@ spec:
   source:
     path: kube-prometheus-stack/overlays/engineer
     repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
-    targetRevision: feature/add-prometheus-stack
+    targetRevision: HEAD
     helm:
       skipCrds: true
     # kustomize:
