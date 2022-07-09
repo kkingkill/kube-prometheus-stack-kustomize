@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kube-prometheus-stack-engineer
+  labels:
+    app.kubernetes.io/name: kube-prometheus-stack
+spec:
+  destination:
+    namespace: monitoring
+    name: moala-nft-engineer
+  project: default
+  source:
+    path: kube-prometheus-stack/overlays/engineer
+    repoURL: https://github.com/kkingkill/kube-prometheus-stack-kustomize.git
+    targetRevision: feature/add-prometheus-stack
+    # helm:
+    #   skipCrds: true
+    # kustomize:
+    #  enableHelm: true   # This appends --enable-helm to the kustomize build command
+  syncPolicy:
+    syncPolicy:
+      syncOptions:
+      - CreateNamespace=true
+    automated: 
+      prune: true
+  ignoreDifferences:
+  - group: apiextensions.k8s.io/
+    name: prometheuses.monitoring.coreos.com
+    kind: CustomResourceDefinition
+    # jsonPointers:
+    #   - /spec
