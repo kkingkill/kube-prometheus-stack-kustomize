@@ -18,7 +18,7 @@ spec:
     helm:
       valueFiles:
         - values1.yaml
-      releaseName: prometheus-customized
+      releaseName: kube-prometheus-stack-local
   syncPolicy:
     # syncOptions:
     #   - Replace=true
