@@ -11,7 +11,7 @@ alertmanager:
               storage: 1Gi
 
 grafana:
-
+  enabled: true
 
   persistence:
     type: pvc
@@ -35,6 +35,10 @@ prometheus:
     retention: 14d
 
 
+kubeStateMetrics:
+  enabled: true
+nodeExporter:
+  enabled: true
 
 
 
