@@ -16,8 +16,9 @@ spec:
     path: ./kube-prometheus-stack-local/overlays/engineer/
     targetRevision: HEAD
     helm:
-      valuesFiles:
+      valueFiles:
       - values.yaml
+      releaseName: prometheus-customized
   syncPolicy:
     # syncOptions:
     #   - Replace=true
