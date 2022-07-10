@@ -17,7 +17,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values1.yaml
+        - values.yaml
       releaseName: kube-prometheus-stack-local
   syncPolicy:
     # syncOptions:
