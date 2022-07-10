@@ -17,7 +17,7 @@ spec:
     targetRevision: HEAD
     helm:
       valueFiles:
-        - values.yaml
+        - values1.yaml
       releaseName: prometheus-customized
   syncPolicy:
     # syncOptions:
